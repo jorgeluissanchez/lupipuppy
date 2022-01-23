@@ -2,17 +2,16 @@ import React, { useEffect, useState } from "react";
 import Axios from "axios";
 import { Link } from "react-router-dom";
 import {
-  Button,
   Col,
   Row,
-  InputGroup,
-  FormControl,
   Tab,
   Tabs,
 } from "react-bootstrap";
+import AddCart from "../components/AddCart";
 
 const ProductInfo = () => {
   const [product, setProduct] = useState([]);
+  console.log(product)
   useEffect(() => {
     const getUrl = () => {
       var actual = window.location + "";
@@ -59,26 +58,7 @@ const ProductInfo = () => {
                 </Col>
                 <Col sm={12} md={5}>
                   <p>Quantity:</p>
-                  <InputGroup className="mb-3">
-                    <Button variant="primary" id="button-add">
-                      -
-                    </Button>
-                    <FormControl
-                      type="text"
-                      placeholder="0"
-                      className="text-center"
-                      id="amount"
-                    />
-                    <Button variant="primary" id="button-add">
-                      +
-                    </Button>
-                  </InputGroup>
-                  <Button
-                    className="mb-3 btn-cart add-button"
-                    variant="primary"
-                  >
-                    Add To Cart
-                  </Button>
+                  <AddCart />
                 </Col>
               </Row>
               <Row className="justify-content">

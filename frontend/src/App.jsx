@@ -6,6 +6,7 @@ import Layout from "./pages/Layout";
 import Home from "./pages/Home";
 import Shop from "./pages/Shop";
 import ProductInfo from "./pages/ProductInfo";
+import CreateProduct from "./pages/CreateProduct";
 import NoMatch from "./pages/NoMatch";
 
 
@@ -17,6 +18,7 @@ export default function App() {
           <Route index element={<Home />} />
           <Route path="shop" element={<Shop />} />
           <Route path="shop/productInfo/:id" element={<ProductInfo />} />
+          <Route path="shop/createproduct" element={<CreateProduct />} />
           <Route path="*" element={<NoMatch />} />
         </Route>
       </Routes>

@@ -22,8 +22,8 @@ const NavBar = () => {
             <Link to="/shop" className="px-2 link">
               Shop
             </Link>
-            <Link to="/services" className="px-2 link">
-              Services
+            <Link to="/shop/createproduct" className="px-2 link">
+              Create Product
             </Link>
           </Nav>
         </Navbar.Collapse>
